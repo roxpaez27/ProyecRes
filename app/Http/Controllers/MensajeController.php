@@ -20,7 +20,7 @@ class MensajeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|string|max:255',
+            'campaña' => 'required|string|max:255',
             'contenido' => 'required|string',
         ]);
 
@@ -37,7 +37,7 @@ class MensajeController extends Controller
     public function update(Request $request, Mensaje $mensaje)
     {
         $request->validate([
-            'titulo' => 'required|string|max:255',
+            'campaña' => 'required|string|max:255',
             'contenido' => 'required|string',
         ]);
 

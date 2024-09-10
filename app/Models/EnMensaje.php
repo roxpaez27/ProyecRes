@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class EnMensaje extends Model
 {
     use HasFactory;
+    protected $fillable = ['TipoM', 'Tclientes', 'campaña', 'zona'];
 }

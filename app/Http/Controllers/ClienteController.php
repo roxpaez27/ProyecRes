@@ -14,30 +14,15 @@ use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
+use App\Models\Cliente;
 
 use Illuminate\Support\Facades\Validator;
 
 class ClienteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index(Request $request)
-    {
-        //Sin paginación
-        $usuarios = User::all();
-        /* $usuarios = User::all();
-        return view('usuarios.index',compact('usuarios')); */
-
-        //Con paginación
-        // $usuarios = User::paginate(2);
-        return view('usuarios.index', compact('usuarios'));
-
-        //al usar esta paginacion, recordar poner en el el index.blade.php este codigo  {!! $usuarios->links() !!}
+     {
+        $clientes = Cliente::paginate(10);
+        return view('clientes.index', compact('clientes'));      
     }
-
-    
-
 }

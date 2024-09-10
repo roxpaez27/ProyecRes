@@ -11,7 +11,7 @@ class MonitoreoController extends Controller
 
     public function index()
     {
-        $mensajes = Monitoreo::paginate(10);
+        $monitoreos = Monitoreo::paginate(10);
         return view('monitoreos.index', compact('monitoreos'));
     }
     

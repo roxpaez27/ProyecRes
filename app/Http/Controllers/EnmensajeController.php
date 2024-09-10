@@ -8,7 +8,7 @@ class EnmensajeController extends Controller
 {
     public function index()
     {
-        $mensajes = EnMensaje::paginate(10);
+        $enmensajes = EnMensaje::paginate(10);
         return view('enviarmensajes.index', compact('enviarmensajes'));
     }
 
