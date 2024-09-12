@@ -29,3 +29,11 @@ Route:: controller(EnmensajeController::class)->group(function() {
     Route:: get ('enviarmensajes', 'index');
     Route:: get ('enviarmensajes/crear', 'crear');
 });
+Route:: controller(MensajeController::class)->group(function() {
+    Route:: get ('mensajes', 'index');
+    Route:: get ('mensajes/crear', 'crear');
+});
+Route:: controller(usuarioController::class)->group(function() {
+    Route:: get ('usuarios', 'index');
+    Route:: get ('usuarios/crear', 'crear');
+});

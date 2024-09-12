@@ -12,7 +12,7 @@
     <!-- Formulario para subir el archivo CSV -->
 
                        <div class="container">
-                        <form >
+                        <form  action="" method="post">
                         
                                    <label for="titulo">Tipo mensaje</label>
                                    <select name="select">
@@ -26,18 +26,18 @@
                                    <label for="titulo">Clientes</label>
                                    
                                     <label for="csv_file">Selecciona un archivo CSV:</label>
-                                    <input type="file" name="csv_file" id="csv_file" accept=".csv" required>
+                                    <input type="file" name="archivo" id="archivo" accept=".csv" required>
                                     <br><br>
                                                             
-                               
+                                <!--Boton para crear una nueva campaña -->
                                 <button type="submit" class="btn btn-primary">+</button>                            
-                                <label for="contenido">Campaña</label>
-                                <select name="select">
-                                    <option value="value1">campaña1</option>
-                                    <option value="value2" selected>campaña2</option>
-                                    <option value="value3">campaña3</option>
-                                  </select> 
-                                  <br><br>
+                                <label for="campaña">Seleccionar campaña:</label>
+                                <select name="campaña" id="campaña">
+                                    <!--Consultamos los las campañas que tenemos ya creadas -->
+                                    @foreach($mensajes as $mensaje)
+                                        <option value="{{ $mensaje->id }}">{{ $mensaje->campaña }}</option>
+                                    @endforeach
+                                </select>
                             
                             <button type="submit" class="btn btn-primary">ENVIAR</button>                            
                         
