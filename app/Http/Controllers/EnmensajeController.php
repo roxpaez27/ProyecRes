@@ -12,7 +12,7 @@ class EnmensajeController extends Controller
         return view('enviarmensajes.index');
     }
 
-    public function create()
+    public function crear()
     {
         return view('enviarmensajes.crear');
     }

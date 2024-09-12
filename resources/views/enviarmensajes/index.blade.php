@@ -9,7 +9,6 @@
     <h1>Subir archivo CSV</h1>
 
     <!-- Formulario para subir el archivo CSV -->
-                    <form action="{{ route('mensajes.store') }}" method="POST">
                        
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
