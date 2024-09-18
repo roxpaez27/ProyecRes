@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-//agregamos lo siguiente
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Spatie\Permission\Models\Role;

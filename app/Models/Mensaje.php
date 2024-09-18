@@ -9,4 +9,5 @@ class Mensaje extends Model
 {
     use HasFactory;
     protected $fillable = ['campaña', 'contenido'];
+    
 }

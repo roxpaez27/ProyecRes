@@ -13,19 +13,32 @@
     <!-- Formulario para subir el archivo CSV -->
 
     <div class="container">
-        <form action="" method="post">
+        <form class="form" action="{{ route('mensajes.store') }}" method="POST">
+            @csrf
             <label for="titulo">Campaña</label>
-            <input type="text">
+            <input type="text" name="campaña">
             <br> <br>
             <label for="titulo">Clientes</label>
-            <textarea name="textarea" rows="10" cols="100"></textarea>
+            <textarea name="contenido" rows="10" cols="100"></textarea>
 
 
             <br> <br>
+            
             <button type="submit" class="btn btn-primary">Nuevo</button>
 
         </form>
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 </body>
+
 
 </html>

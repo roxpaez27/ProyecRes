@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('mensajes', function (Blueprint $table) {
             $table->id();
+            $table->string('campaña');
+            $table->text('contenido');
             $table->timestamps();
         });
     }
